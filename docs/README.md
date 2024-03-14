@@ -1,6 +1,6 @@
 # Fictícia Store
 
-The Ficticia Store is a website for a fake retail store. The purpose of this project is to apply concepts of React JS, Bootstrap 5, Internalization with INTL, and Redux.
+The Ficticia Store is a website for a fake retail store. The purpose of this project is to apply concepts of React JS, Bootstrap 5, Redux, and internationalization with react-intl.
 
 ## How to use
 
