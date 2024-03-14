@@ -1,0 +1,37 @@
+******TODO******
+
+**FRONTEND**
+[Add] cart page
+[Add] about page
+[Add] price validation
+[Add] card slight change in size when hovering
+[Change] color of navbar
+[Fix] map height on small screen
+[Add] products pagination
+[Fix] navlink hover on footer ---
+[Add] contact page ---
+[Add] footer section ---
+[Fix] carousel height to match the remaining space ---
+[Change] carousel button to (background white and color black) ---
+[Add] price formatter ---
+[Add] translation to english ---
+[Fix] navbar selecting two items at the same time ---
+[Add] intl to deal with strings in a more professional way. ---
+
+**BACKEND**
+[Add] CRUD of products
+[Add] CRUD of users(clients or employees) 
+[Add] CRUD of cart
+[Add] function to add a product to the cart
+[Add] function to logout
+[Add] cookie to access the page offline
+[Add] user profiles and access
+[Add] redux to save session
+
+**STUDY & INTEGRATION**
+[Study] naming strings in intl
+[Study] how to write good changelog's messages
+[Study] navlink outside the navbar. is it necessary?
+[Integration] crud products from api
+[Integration] crud users from api
+[Integration] crud carts from api

@@ -1,0 +1,23 @@
+footer {
+  height: 250px;
+  color: white;
+}
+
+.items-footer {
+  list-style: none;
+  text-decoration: underline;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  background-color: black;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: lightgreen;
+}
