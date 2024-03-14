@@ -8,6 +8,7 @@
 [Change] color of navbar
 [Fix] map height on small screen
 [Add] products pagination
+[Fix] navbar in small screens ---
 [Fix] navlink hover on footer ---
 [Add] contact page ---
 [Add] footer section ---

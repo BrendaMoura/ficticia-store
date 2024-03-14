@@ -33,10 +33,7 @@ const Navbar = () => {
   const intl = useIntl();
 
   return (
-    <nav
-      className="navbar navbar-expand-sm bg-body-tertiary"
-      style={{ height: "60px" }}
-    >
+    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/home" end>
           {intl.formatMessage(messages.title)}
