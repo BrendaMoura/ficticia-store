@@ -4,10 +4,10 @@
 [Add] cart page
 [Add] about page
 [Add] price validation
-[Add] card slight change in size when hovering
 [Change] color of navbar
 [Fix] map height on small screen
 [Add] products pagination
+[Add] card border/shadow/height-width when hovering ---
 [Fix] navbar in small screens ---
 [Fix] navlink hover on footer ---
 [Add] contact page ---
