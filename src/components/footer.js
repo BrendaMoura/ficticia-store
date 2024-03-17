@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Twitter from "../assets/img/twitter.png";
 import Facebook from "../assets/img/facebook.png";
 import Instagram from "../assets/img/instagram.png";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   title: {
@@ -36,8 +37,10 @@ const Footer = () => {
   const intl = useIntl();
 
   return (
-    <footer className="container-fluid d-flex flex-column align-items-center justify-content-center position-relative bg-secondary p-5">
-      <h5>{intl.formatMessage(messages.title)}</h5>
+    <footer className="container-fluid d-flex flex-column align-items-center justify-content-center position-relative bg-body-secondary p-5">
+      <h5 style={{ color: COLORS.blue }}>
+        {intl.formatMessage(messages.title)}
+      </h5>
       <ul className="d-flex flex-row items-footer gap-2 p-0">
         <li>
           <NavLink className="link" to="/home">
@@ -67,7 +70,7 @@ const Footer = () => {
       </div>
       <p
         className="position-absolute bottom-0"
-        style={{ fontSize: "12px", color: "#d3d3d3" }}
+        style={{ fontSize: "12px", color: COLORS.blue }}
       >
         {intl.formatMessage(messages.copyright)}!
       </p>

@@ -1,6 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useIntl, defineMessages } from "react-intl";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   title: {
@@ -33,13 +34,16 @@ const Navbar = () => {
   const intl = useIntl();
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
+    <nav
+      className="navbar navbar-expand-lg navbar-custom"
+      style={{ backgroundColor: COLORS.blue }}
+    >
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/home" end>
+        <Link className="navbar-brand text-white" to="/home" end>
           {intl.formatMessage(messages.title)}
-        </NavLink>
+        </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler bg-light"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -52,27 +56,30 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home" end>
+              <NavLink className="nav-link text-white" to="/home" end>
                 {intl.formatMessage(messages.home)}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home/about-us">
+              <NavLink className="nav-link text-white" to="/home/about-us">
                 {intl.formatMessage(messages.about)}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home/manage-products">
+              <NavLink
+                className="nav-link text-white"
+                to="/home/manage-products"
+              >
                 {intl.formatMessage(messages.manageProducts)}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home/contact">
+              <NavLink className="nav-link text-white" to="/home/contact">
                 {intl.formatMessage(messages.contact)}
               </NavLink>
             </li>
           </ul>
-          <button className="btn btn-secondary d-flex" type="submit">
+          <button className="btn btn-light d-flex" type="submit">
             {intl.formatMessage(messages.logout)}
           </button>
         </div>

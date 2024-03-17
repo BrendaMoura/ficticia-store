@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useIntl, defineMessages } from "react-intl";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   welcome: {
@@ -31,7 +32,10 @@ const LoginPage = () => {
   return (
     <div className="container m-0">
       <div className="row row-cols-sm-1 vw-100 vh-100">
-        <div className="col-md-4 bg-body-secondary d-flex align-items-center justify-content-center">
+        <div
+          className="col-md-4 d-flex align-items-center justify-content-center text-white"
+          style={{ backgroundColor: COLORS.blue }}
+        >
           <h5>{intl.formatMessage(messages.welcome)}</h5>
         </div>
         <div className="col-md-8 d-flex align-items-center justify-content-center">
@@ -63,7 +67,11 @@ const LoginPage = () => {
                 />
               </div>
               <div className="d-grid">
-                <NavLink className="btn btn-success" to="/home">
+                <NavLink
+                  className="btn text-white"
+                  style={{ backgroundColor: COLORS.blue }}
+                  to="/home"
+                >
                   {intl.formatMessage(messages.login)}
                 </NavLink>
               </div>

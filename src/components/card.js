@@ -3,6 +3,7 @@ import Placeholder from "../assets/img/placeholder-image.png";
 import { useNavigate } from "react-router-dom";
 import { useIntl, defineMessages, FormattedNumber } from "react-intl";
 import { getCurrency } from "locale-currency";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   addToCart: {
@@ -49,7 +50,11 @@ const Card = ({ product }) => {
           />
         </p>
         <div className="d-grid">
-          <button className="btn btn-primary" onClick={handleAddToCart}>
+          <button
+            className="btn text-white"
+            style={{ backgroundColor: COLORS.blue }}
+            onClick={handleAddToCart}
+          >
             {intl.formatMessage(messages.addToCart)}
           </button>
         </div>

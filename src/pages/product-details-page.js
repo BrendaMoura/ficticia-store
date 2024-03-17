@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { useIntl, defineMessages, FormattedNumber } from "react-intl";
 import { getCurrency } from "locale-currency";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   addToCard: {
@@ -76,7 +77,10 @@ const ProductDetailsPage = () => {
             />
           </p>
           <div className="d-flex justify-content-end">
-            <button className="btn btn-primary">
+            <button
+              className="btn text-white"
+              style={{ backgroundColor: COLORS.blue }}
+            >
               {intl.formatMessage(messages.addToCard)}
             </button>
           </div>

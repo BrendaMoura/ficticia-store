@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useIntl, defineMessages } from "react-intl";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   name: {
@@ -71,7 +72,11 @@ const ContactPage = () => {
               </div>
 
               <div className="d-grid">
-                <NavLink className="btn btn-success" to="#">
+                <NavLink
+                  className="btn text-white"
+                  style={{ backgroundColor: COLORS.blue }}
+                  to="#"
+                >
                   {intl.formatMessage(messages.send)}
                 </NavLink>
               </div>

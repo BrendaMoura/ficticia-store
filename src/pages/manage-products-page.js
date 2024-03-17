@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useIntl, defineMessages, FormattedNumber } from "react-intl";
 import { getCurrency } from "locale-currency";
+import { COLORS } from "../utils/colors";
 
 const messages = defineMessages({
   title: {
@@ -98,10 +99,10 @@ const ManageProductsPage = () => {
                 <td>{product.stock}</td>
                 <td>
                   <div className="d-grid gap-2 d-lg-flex">
-                    <button className="btn btn-secondary btn-sm">
+                    <button className="btn btn-primary btn-sm">
                       {intl.formatMessage(messages.edit)}
                     </button>
-                    <button className="btn btn-secondary btn-sm">
+                    <button className="btn btn-danger btn-sm">
                       {intl.formatMessage(messages.delete)}
                     </button>
                   </div>
@@ -169,7 +170,10 @@ const ManageProductsPage = () => {
                 </div>
 
                 <div className="d-grid">
-                  <button className="btn btn-success">
+                  <button
+                    className="btn text-white"
+                    style={{ backgroundColor: COLORS.blue }}
+                  >
                     {intl.formatMessage(messages.save)}
                   </button>
                 </div>
