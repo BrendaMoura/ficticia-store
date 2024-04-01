@@ -41,3 +41,13 @@ footer {
   font-weight: bold;
   color: var(--color-orange);
 }
+
+.box {
+  height: 50%;
+}
+
+@media screen and (min-width: 576px) {
+  .box {
+    height: 100%;
+  }
+}

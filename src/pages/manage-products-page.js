@@ -1,8 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useIntl, defineMessages, FormattedNumber } from "react-intl";
 import { getCurrency } from "locale-currency";
 import { COLORS } from "../utils/colors";
+import Pagination from "../components/pagination";
 
 const messages = defineMessages({
   title: {
@@ -51,20 +52,13 @@ const ManageProductsPage = () => {
   const [products, setProducts] = useState([]);
   const intl = useIntl();
 
-  const fetchProducts = async () => {
-    const response = await fetch("https://dummyjson.com/products");
-    const data = await response.json();
-    setProducts(data.products);
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
   return (
     <>
-      <div className="container min-w-75 mx-auto mt-5">
-        <h5 className="fw-bold">{intl.formatMessage(messages.title)}</h5>
-        <div className="d-flex justify-content-end">
+      <div className="container min-w-75 mx-auto mt-5 d-flex flex-column align-items-center">
+        <h5 className="fw-bold align-self-start">
+          {intl.formatMessage(messages.title)}
+        </h5>
+        <div className="d-flex justify-content-end align-self-end">
           <button
             className="btn btn-warning btn-sm"
             data-bs-toggle="modal"
@@ -87,7 +81,7 @@ const ManageProductsPage = () => {
           <tbody>
             {products.map((product, index) => (
               <tr key={index}>
-                <th scope="row">{product.id}</th>
+                <td>{product.id}</td>
                 <td>{product.title}</td>
                 <td>
                   <FormattedNumber
@@ -111,6 +105,8 @@ const ManageProductsPage = () => {
             ))}
           </tbody>
         </table>
+
+        <Pagination setProducts={setProducts} />
       </div>
 
       <div className="modal fade" id="cadastrarProdutos">
@@ -147,7 +143,7 @@ const ManageProductsPage = () => {
                     {intl.formatMessage(messages.price)}
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     id="price"
                     className="form-control form-control-lg"
                     aria-describedby="price"

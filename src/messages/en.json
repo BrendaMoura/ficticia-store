@@ -28,5 +28,7 @@
   "admin/manage-product.stock": "Stock",
   "admin/manage-product.actions": "Actions",
   "admin/manage-product.action-button.new-product": "New product",
-  "store/manage-product.action-button.save-product": "Save product"
+  "store/manage-product.action-button.save-product": "Save product",
+  "store/pagination.previous": "Previous",
+  "store/pagination.next": "Next"
 }

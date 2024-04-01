@@ -3,9 +3,11 @@
 **FRONTEND**
 [Add] cart page
 [Add] about page
-[Add] price validation
 [Fix] map height on small screen
-[Add] products pagination
+[Change] store logo ---
+[Add] products pagination ---
+[Change] input type for price ---
+[Fix] product details is not responsive ---
 [Change] color of navbar/card/button/link ---
 [Add] card border/shadow/height-width when hovering ---
 [Fix] navbar in small screens ---

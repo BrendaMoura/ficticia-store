@@ -28,5 +28,7 @@
   "admin/manage-product.stock": "Estoque",
   "admin/manage-product.actions": "Ações",
   "admin/manage-product.action-button.new-product": "Novo Produto",
-  "store/manage-product.action-button.save-product": "Salvar produto"
+  "store/manage-product.action-button.save-product": "Salvar produto",
+  "store/pagination.previous": "Anterior",
+  "store/pagination.next": "Próximo"
 }

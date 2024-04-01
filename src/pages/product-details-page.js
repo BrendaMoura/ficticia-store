@@ -20,7 +20,7 @@ const ProductDetailsPage = () => {
     <div className="container-fluid" style={{ height: "calc(100vh - 60px)" }}>
       <div className="row row-cols-1 row-cols-sm-2 h-100">
         <div
-          className="col carousel carousel-dark slide p-0 h-100"
+          className="col carousel carousel-dark slide p-0 box"
           id="carouselProductImages"
         >
           <div className="carousel-inner h-100">
@@ -66,7 +66,7 @@ const ProductDetailsPage = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        <div className="col p-5">
+        <div className="col p-5 box">
           <h5 className="fw-bold">{product.title}</h5>
           <p>{product.description}</p>
           <p>
