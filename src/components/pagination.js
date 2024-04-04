@@ -12,15 +12,43 @@ const messages = defineMessages({
   },
 });
 
-const Pagination = ({ setProducts }) => {
+const Pagination = ({ setProducts, maxItemsPerPage = 12, maxPages = 5 }) => {
   const intl = useIntl();
-
   const [currentPage, setCurrentPage] = useState(1);
-  const maxItemsPerPage = 12;
   const nItems = 100;
   const nPages = Math.ceil(nItems / maxItemsPerPage);
   const nSkipItems = currentPage * maxItemsPerPage - maxItemsPerPage;
-  const numbers = [...Array(nPages + 1).keys()].slice(1);
+  const [numbers, setNumbers] = useState(getArrayPages());
+
+  function getArrayPages() {
+    if (maxPages > nPages) {
+      return [...Array(nPages + 1).keys()].slice(1);
+    }
+
+    return [...Array(maxPages + 1).keys()].slice(1);
+  }
+
+  const updatePageNumbers = () => {
+    if (
+      !numbers.includes(currentPage) &&
+      currentPage - 1 === numbers[maxPages - 1]
+    ) {
+      const newNumbers = [...numbers];
+      for (let i = 0; i < maxPages; i++) {
+        ++newNumbers[i];
+      }
+      setNumbers([...newNumbers]);
+    } else if (
+      !numbers.includes(currentPage) &&
+      currentPage + 1 === numbers[0]
+    ) {
+      const newNumbers = [...numbers];
+      for (let i = 0; i < maxPages; i++) {
+        --newNumbers[i];
+      }
+      setNumbers([...newNumbers]);
+    }
+  };
 
   const fetchProducts = async () => {
     const response = await fetch(
@@ -33,6 +61,7 @@ const Pagination = ({ setProducts }) => {
 
   useEffect(() => {
     fetchProducts();
+    if (maxPages < nPages) updatePageNumbers();
   }, [currentPage]);
 
   const changePage = (pageNumber) => {
