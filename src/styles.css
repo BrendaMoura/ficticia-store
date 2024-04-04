@@ -69,6 +69,14 @@ footer {
   margin-top: 70px;
 }
 
+th:last-child {
+  text-align: right;
+}
+
+.btn-action {
+  width: 60px;
+}
+
 @media screen and (min-width: 576px) {
   .box {
     height: 100%;

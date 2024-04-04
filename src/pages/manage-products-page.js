@@ -92,11 +92,11 @@ const ManageProductsPage = () => {
                 </td>
                 <td>{product.stock}</td>
                 <td>
-                  <div className="d-grid gap-2 d-lg-flex">
-                    <button className="btn btn-primary btn-sm">
+                  <div className="d-grid gap-2 d-lg-flex justify-content-end">
+                    <button className="btn btn-primary btn-sm btn-action">
                       {intl.formatMessage(messages.edit)}
                     </button>
-                    <button className="btn btn-danger btn-sm">
+                    <button className="btn btn-danger btn-sm btn-action">
                       {intl.formatMessage(messages.delete)}
                     </button>
                   </div>
