@@ -67,23 +67,28 @@ const ProductDetailsPage = () => {
           </button>
         </div>
         <div className="col p-5 box">
-          <h5 className="fw-bold">{product.title}</h5>
+          <h2 className="fw-bold">{product.title}</h2>
+          <span className="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+          </span>
           <p>{product.description}</p>
-          <p>
+          <p
+            className="fw-bold"
+            style={{ color: COLORS.blue, fontSize: "20px" }}
+          >
             <FormattedNumber
               value={product.price}
               style="currency"
               currency={getCurrency(navigator.language)}
             />
           </p>
-          <div className="d-flex justify-content-end">
-            <button
-              className="btn text-white"
-              style={{ backgroundColor: COLORS.blue }}
-            >
-              {intl.formatMessage(messages.addToCard)}
-            </button>
-          </div>
+          <button className="btn text-white" id="btn-add-cart">
+            {intl.formatMessage(messages.addToCard)}
+          </button>
         </div>
       </div>
     </div>

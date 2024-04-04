@@ -1,7 +1,7 @@
 html {
-  --color-blue: #1e5bc6;
-  --color-blue-a: rgba(30, 91, 198, 0.3);
-  --color-orange: #ec8643;
+  --blue: #1e5bc6;
+  --blue-a: rgba(30, 91, 198, 0.3);
+  --orange: #ec8643;
 }
 
 .navbar-custom {
@@ -10,7 +10,7 @@ html {
 
 .navbar-custom a.active {
   padding-bottom: 3px;
-  border-bottom: 4px solid var(--color-orange);
+  border-bottom: 4px solid var(--orange);
 }
 
 footer {
@@ -24,7 +24,7 @@ footer {
 }
 
 .card:hover {
-  box-shadow: 0px 0px 0px 3px var(--color-blue-a);
+  box-shadow: 0px 0px 0px 3px var(--blue-a);
 }
 
 .carousel-control-prev-icon,
@@ -34,20 +34,49 @@ footer {
 }
 
 .link {
-  color: var(--color-blue);
+  color: var(--blue);
 }
 
 .link:hover {
   font-weight: bold;
-  color: var(--color-orange);
+  color: var(--orange);
 }
 
 .box {
   height: 50%;
 }
 
+.stars {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bi-star,
+.bi-star-fill {
+  color: var(--blue);
+}
+
+.card-img-top {
+  height: 190px;
+  width: 100%;
+}
+
+#btn-add-cart {
+  background-color: var(--blue);
+  width: 100%;
+  margin-top: 70px;
+}
+
 @media screen and (min-width: 576px) {
   .box {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .btn-add-cart {
+    margin-top: 20px;
   }
 }

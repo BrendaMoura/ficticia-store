@@ -4,7 +4,8 @@
 [Add] cart page
 [Add] about page
 [Fix] map height on small screen
-[Change] improve product details page
+[Change] action buttons position on manage products page
+[Change] improve product details page ---
 [Add] max number of pages in pagination component ---
 [Change] store logo ---
 [Add] products pagination ---

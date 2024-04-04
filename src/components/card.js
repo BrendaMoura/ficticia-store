@@ -33,11 +33,11 @@ const Card = ({ product }) => {
       onClick={handleProductDetails}
     >
       <img
-        className="card-img-top object-fit-cover w-100"
+        className="card-img-top"
         src={product.images[0] || Placeholder}
         alt={product.name}
-        style={{ height: "200px" }}
       />
+
       <div className="card-body">
         <div className="card-title overflow-hidden" style={{ height: "1.5em" }}>
           <h6>{product.title}</h6>
@@ -49,15 +49,13 @@ const Card = ({ product }) => {
             currency={getCurrency(navigator.language)}
           />
         </p>
-        <div className="d-grid">
-          <button
-            className="btn text-white"
-            style={{ backgroundColor: COLORS.blue }}
-            onClick={handleAddToCart}
-          >
-            {intl.formatMessage(messages.addToCart)}
-          </button>
-        </div>
+        <button
+          className="btn text-white"
+          style={{ backgroundColor: COLORS.blue, width: "100%" }}
+          onClick={handleAddToCart}
+        >
+          {intl.formatMessage(messages.addToCart)}
+        </button>
       </div>
     </div>
   );
