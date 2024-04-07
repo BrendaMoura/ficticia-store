@@ -17,56 +17,61 @@ const ProductDetailsPage = () => {
   const intl = useIntl();
 
   return (
-    <div className="container-fluid" style={{ height: "calc(100vh - 60px)" }}>
+    <div
+      className="container container-product"
+      style={{ height: "calc(100vh - 60px)" }}
+    >
       <div className="row row-cols-1 row-cols-sm-2 h-100">
-        <div
-          className="col carousel carousel-dark slide p-0 box"
-          id="carouselProductImages"
-        >
-          <div className="carousel-inner h-100">
-            <div className="carousel-item active h-100">
-              <img
-                src={product.thumbnail}
-                className="d-block h-100 w-100"
-                alt={product.title}
-              />
-            </div>
-            {product.images.map((url) => (
-              <div className="carousel-item h-100">
+        <div className="col">
+          <div
+            className="carousel carousel-dark slide p-0 h-100"
+            id="carouselProductImages"
+          >
+            <div className="carousel-inner h-100">
+              <div className="carousel-item active h-100">
                 <img
-                  src={url}
+                  src={product.thumbnail}
                   className="d-block h-100 w-100"
                   alt={product.title}
                 />
               </div>
-            ))}
+              {product.images.map((url) => (
+                <div className="carousel-item h-100">
+                  <img
+                    src={url}
+                    className="d-block h-100 w-100"
+                    alt={product.title}
+                  />
+                </div>
+              ))}
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselProductImages"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselProductImages"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselProductImages"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselProductImages"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
-        <div className="col p-5 box">
+        <div className="col p-5">
           <h2 className="fw-bold">{product.title}</h2>
           <span className="stars">
             <i class="bi bi-star-fill"></i>

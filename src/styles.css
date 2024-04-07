@@ -42,10 +42,6 @@ footer {
   color: var(--orange);
 }
 
-.box {
-  height: 50%;
-}
-
 .stars {
   display: inline-block;
   height: 30px;
@@ -77,14 +73,27 @@ th:last-child {
   width: 60px;
 }
 
-@media screen and (min-width: 576px) {
-  .box {
-    height: 100%;
-  }
+.container-product > div > div {
+  height: 75%;
+  margin: auto;
+}
+
+.carousel-inner {
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 575px) {
   .btn-add-cart {
     margin-top: 20px;
+  }
+
+  .container-product > div > div {
+    height: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel-inner {
+    border-radius: 0;
   }
 }
