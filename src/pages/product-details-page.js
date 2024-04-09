@@ -74,11 +74,11 @@ const ProductDetailsPage = () => {
         <div className="col p-5">
           <h2 className="fw-bold">{product.title}</h2>
           <span className="stars">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star"></i>
+            <i className="bi bi-star"></i>
           </span>
           <p>{product.description}</p>
           <p

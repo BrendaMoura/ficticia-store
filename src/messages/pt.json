@@ -30,5 +30,11 @@
   "admin/manage-product.action-button.new-product": "Novo Produto",
   "store/manage-product.action-button.save-product": "Salvar produto",
   "store/pagination.previous": "Anterior",
-  "store/pagination.next": "Próximo"
+  "store/pagination.next": "Próximo",
+  "store/minicart.title": "Carrinho",
+  "store/minicart.subtotal": "Subtotal",
+  "store/minicart.continue-shopping": "Continue comprando",
+  "store/minicart.go-to-checkout": "Finalizar comprar",
+  "store/minicart.empty.title": "Seu carrinho está vazio",
+  "store/minicart.empty.content": "Parece que você ainda não fez sua escolha."
 }

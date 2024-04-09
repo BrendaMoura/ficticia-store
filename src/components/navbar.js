@@ -79,9 +79,22 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <button className="btn btn-light d-flex" type="submit">
-            {intl.formatMessage(messages.logout)}
-          </button>
+          <span className="side-button-block">
+            <button
+              className="btn p-0"
+              data-bs-toggle="offcanvas"
+              href="#cartsidebar"
+              role="button"
+              aria-controls="cartsidebar"
+              style={{ border: 0 }}
+            >
+              <i className="bi bi-cart2"></i>
+            </button>
+
+            <button className="btn btn-light d-flex" type="submit">
+              {intl.formatMessage(messages.logout)}
+            </button>
+          </span>
         </div>
       </div>
     </nav>

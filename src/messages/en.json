@@ -30,5 +30,11 @@
   "admin/manage-product.action-button.new-product": "New product",
   "store/manage-product.action-button.save-product": "Save product",
   "store/pagination.previous": "Previous",
-  "store/pagination.next": "Next"
+  "store/pagination.next": "Next",
+  "store/minicart.title": "Mini Cart",
+  "store/minicart.subtotal": "Subtotal",
+  "store/minicart.continue-shopping": "Continue shopping",
+  "store/minicart.go-to-checkout": "Go to checkout",
+  "store/minicart.empty.title": "Your cart is empty",
+  "store/minicart.empty.content": "It looks like you haven't made your choice yet."
 }

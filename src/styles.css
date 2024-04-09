@@ -82,9 +82,96 @@ th:last-child {
   border-radius: 10px;
 }
 
+.side-button-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.bi-cart2 {
+  color: aliceblue;
+  font-size: 25px;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid lightgray;
+}
+
+#minicart-items {
+  width: 100%;
+  height: 60%;
+  overflow: hidden auto;
+}
+
+.minicart-item {
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  width: 90%;
+  border-bottom: 1px solid lightgray;
+  padding: 15px;
+}
+
+.minicart-item img {
+  width: 55px;
+  height: 55px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.minicart-item span {
+  width: calc(100% - 85px);
+  height: 100%;
+}
+
+.minicart-item h5 {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+#minus-plus {
+  width: 90px;
+  height: 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+
+#minus-plus button {
+  width: 40px;
+  height: 30px;
+  border: 0;
+}
+
+.minicart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% - 1rem);
+  height: 200px;
+}
+
+.minicart-footer p {
+  margin-top: 10px;
+}
+
+.minicart-footer button {
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.minicart-footer button:last-child {
+  color: white;
+  background-color: var(--blue);
+}
+
 @media screen and (max-width: 575px) {
-  .btn-add-cart {
-    margin-top: 20px;
+  #btn-add-cart {
+    margin: 5%;
   }
 
   .container-product > div > div {

@@ -1,9 +1,9 @@
 ******TODO******
 
 **FRONTEND**
-[Add] cart page
 [Add] about page
 [Fix] map height on small screen
+[Add] minicart component ---
 [Change] action buttons position on manage products page ---
 [Change] improve product details page ---
 [Add] max number of pages in pagination component ---

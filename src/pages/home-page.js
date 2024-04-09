@@ -7,6 +7,7 @@ import ManageProductsPage from "./manage-products-page";
 import ProductDetailsPage from "./product-details-page";
 import ContactPage from "./contact-page";
 import AboutUsPage from "./about-page";
+import { Minicart } from "../components/minicart";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
       </Routes>
+      <Minicart />
       <Footer />
     </>
   );
